@@ -85,7 +85,9 @@
 	<string>Test</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>lato.ttf</string>
+		<string>Lato-Bold.ttf</string>
+		<string>Lato-Medium.ttf</string>
+		<string>Lato-Regular.ttf</string>
 	</array>
 </dict>
 </plist>

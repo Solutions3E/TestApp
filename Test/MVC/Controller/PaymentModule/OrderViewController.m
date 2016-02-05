@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtfield_address2;
 @property (nonatomic, strong) NSString *str_creditCardBuffer;
 @property (weak, nonatomic) IBOutlet UIButton *btn_paymentSuccess;
+@property (weak, nonatomic) IBOutlet UITextField *txtfield_lastName;
 
 - (IBAction)btnAction_back:(id)sender;
 - (IBAction)btnAction_logOut:(id)sender;
@@ -38,11 +39,28 @@
     self.btn_paymentSuccess.hidden = YES;
     self.str_creditCardBuffer = @"";
     [self addPickerView];
+    
+    UIImageView *imgview_arrow;
+    imgview_arrow.frame = CGRectMake(0, 0, 20 , 20);
+    imgview_arrow.image = [UIImage imageNamed:@""];
+    
+    self.txtfield_expiryDate.rightView = imgview_arrow;
+    self.txtfield_expiryDate.rightViewMode = UITextFieldViewModeAlways;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden = YES;
+    
+    NSString *email =  [appDelegate().defaults objectForKey:k_Email];
+    NSDictionary *dictData = [self GetPaymentDetailsforUser:email];
+    
+    self.txtfield_name.text = dictData[@"FName"];
+    self.txtfield_lastName = dictData[@"LName"];
+    self.txtfield_cardNumber = dictData[@"CardNum"];
+    self.txtfield_expiryDate = dictData[@"EXPDate"];
+    self.txtfield_address1 = dictData[@"Address1"];
+    self.txtfield_address2 = dictData[@"Address2"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +69,7 @@
 
 - (IBAction)btnAction_logOut:(id)sender {
     [self logOutFromFB];
+        [appDelegate().defaults setObject:@"0" forKey:k_Auth];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
@@ -86,7 +105,8 @@
 
 -(void)viewDidLayoutSubviews{
     // Add bottom border to textfield
-    [Util addBottomLine:self.txtfield_name withPlaceholder:@"NAME"];
+    [Util addBottomLine:self.txtfield_name withPlaceholder:@"FIRST NAME"];
+    [Util addBottomLine:self.txtfield_lastName withPlaceholder:@"LAST NAME"];
     [Util addBottomLine:self.txtfield_cardNumber withPlaceholder:@"CARD NUMBER"];
     [Util addBottomLine:self.txtfield_cvv withPlaceholder:@"CVV"];
     [Util addBottomLine:self.txtfield_expiryDate withPlaceholder:@"EXPIRY DATE"];
@@ -107,8 +127,39 @@
     if(alertMsg != nil) {
         [self presentViewController: [Util alertControllerWithTitle: k_APPName message: alertMsg actionTitle: @"OK"] animated:YES completion:nil];
     }
+    else
+    {
+        NSString *email =  [appDelegate().defaults objectForKey:k_Email];
+        NSString *uID = [self GetUserIDfromEmail:email];
+        [self savePaymentInfoWithFirstName:self.txtfield_name.text LastName:self.txtfield_lastName.text UserID:uID CardNumber:self.txtfield_cardNumber.text ExpDate:self.txtfield_expiryDate.text Address1:self.txtfield_address1.text Address2:self.txtfield_address2.text];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd-MMM-yyyy"];
+        NSDate *date = [dateFormatter dateFromString:self.txtfield_expiryDate.text];
+        NSCalendar* calendar = [NSCalendar currentCalendar];
+        NSDateComponents* components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:date]; // Get necessary date components
+
+        
+        STPCardParams *cardParams = [[STPCardParams alloc] init];
+        [cardParams setNumber:self.txtfield_cardNumber.text];
+        [cardParams setExpMonth:[components month]];
+        [cardParams setExpYear:[components year]];
+        [cardParams setCvc:self.txtfield_cvv.text];
+        
+        
+        [[STPAPIClient sharedClient]
+         createTokenWithCard:cardParams
+         completion:^(STPToken *token, NSError *error) {
+             if (error) {
+                 //[self handleError:error];
+             } else {
+                 [self createBackendChargeWithToken:token completion:^(PKPaymentAuthorizationStatus status) {
+                     
+                 }];
+             }
+         }];
+    }
     
-    self.btn_paymentSuccess.hidden = NO;
 }
 
 - (IBAction)btnAction_paymentSuccess:(id)sender {
@@ -213,6 +264,85 @@
         return YES;
     }
     return NO;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
+- (void)savePaymentInfoWithFirstName:(NSString *)fName LastName:(NSString *)lName UserID:(NSString *)uid CardNumber:(NSString *)cardNum ExpDate:(NSString *)expdate Address1:(NSString *)add1 Address2:(NSString *)add2
+{
+    NSString *queryUserCheck = [NSString stringWithFormat:@"SELECT * FROM tblPaymentSettings WHERE UserID='%@';",uid];
+    NSMutableArray *arrUser = [appDelegate().SQLConnect GetFromDatabase:queryUserCheck];
+    if (arrUser.count > 0)
+    {
+        NSLog(@"User Exist");
+        
+        NSString *queryUpdate = [NSString stringWithFormat:@"UPDATE tblPaymentSettings SET FName='%@',LName='%@',CardNum='%@',EXPDate='%@',Address1='%@',Address2='%@' WHERE UserID = '%@';",fName,lName,cardNum,expdate,add1,add2,uid];
+        [appDelegate().SQLConnect updateDatabase:queryUpdate];
+        
+    }
+    else
+    {
+        
+        NSString *queryInsert = [NSString stringWithFormat:@"INSERT INTO tblPaymentSettings (FName,LName,UserID,CardNum,EXPDate,Address1,Address2) VALUES ('%@','%@','%@','%@','%@','%@','%@',);",fName,lName,uid,cardNum,expdate,add1,add2];
+        [appDelegate().SQLConnect insertToDatabase:queryInsert];
+    }
+}
+
+- (NSString*)GetUserIDfromEmail:(NSString*)email
+{
+    NSString *queryUser = [NSString stringWithFormat:@"SELECT * FROM tblUser WHERE Email='%@';",email];
+    NSMutableArray *arrUser = [appDelegate().SQLConnect GetFromDatabase:queryUser];
+    if (arrUser.count > 0)
+    {
+        return arrUser[0][@"ID"];
+    }
+    return @"0";
+}
+
+- (NSMutableDictionary*)GetPaymentDetailsforUser:(NSString*)email
+{
+    
+    NSString *uID = [self GetUserIDfromEmail:email];
+    
+        NSLog(@"Success");
+        
+        NSString *queryPayment = [NSString stringWithFormat:@"SELECT * FROM tblPaymentSettings WHERE UserID='%@';",uID];
+        NSMutableArray *arrDetails = [appDelegate().SQLConnect GetFromDatabase:queryPayment];
+        if (arrDetails.count > 0)
+        {
+            return arrDetails[0];
+        }
+
+    
+    
+    return [NSMutableDictionary dictionary];
+}
+
+- (void)createBackendChargeWithToken:(STPToken *)token
+                          completion:(void (^)(PKPaymentAuthorizationStatus))completion {
+    NSURL *url = [NSURL URLWithString:@"https://example.com/token"];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    request.HTTPMethod = @"POST";
+    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@", token.tokenId];
+    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+    NSURLSessionDataTask *task =
+    [session dataTaskWithRequest:request
+               completionHandler:^(NSData *data,
+                                   NSURLResponse *response,
+                                   NSError *error) {
+                   if (error) {
+                            [self presentViewController: [Util alertControllerWithTitle: k_APPName message:error.description actionTitle: @"OK"] animated:YES completion:nil];
+                       completion(PKPaymentAuthorizationStatusFailure);
+                   } else {
+                       self.btn_paymentSuccess.hidden = NO;
+                       completion(PKPaymentAuthorizationStatusSuccess);
+                   }
+               }];
+    [task resume];
 }
 
 @end

@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    productImages = [NSArray arrayWithObjects: @"Product1", @"Product2", @"Product3", @"Product4", @"Product5", @"Product6", @"Product7", @"Product8", @"Product9", @"Product10", nil];
+    productImages = @[@"Product1", @"Product2", @"Product3", @"Product4", @"Product5", @"Product6", @"Product4", @"Product2", @"Product3", @"Product1"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -67,6 +67,7 @@
 
 - (IBAction)btnAction_logOut:(id)sender {
     [self logOutFromFB];
+    [appDelegate().defaults setObject:@"0" forKey:k_Auth];
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
