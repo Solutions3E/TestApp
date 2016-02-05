@@ -1,0 +1,858 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		572CEC951C64913600EC4DAF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CEC941C64913600EC4DAF /* main.m */; };
+		572CEC981C64913700EC4DAF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CEC971C64913700EC4DAF /* AppDelegate.m */; };
+		572CEC9E1C64913700EC4DAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572CEC9C1C64913700EC4DAF /* Main.storyboard */; };
+		572CECA01C64913700EC4DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 572CEC9F1C64913700EC4DAF /* Assets.xcassets */; };
+		572CECA31C64913700EC4DAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 572CECA11C64913700EC4DAF /* LaunchScreen.storyboard */; };
+		572CECAE1C64913700EC4DAF /* TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CECAD1C64913700EC4DAF /* TestTests.m */; };
+		572CECB91C64913700EC4DAF /* TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CECB81C64913700EC4DAF /* TestUITests.m */; };
+		572CECE31C64C04F00EC4DAF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CECDF1C64C04F00EC4DAF /* Bolts.framework */; };
+		572CECE41C64C04F00EC4DAF /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 572CECE01C64C04F00EC4DAF /* FacebookSDKStrings.bundle */; };
+		572CECE51C64C04F00EC4DAF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CECE11C64C04F00EC4DAF /* FBSDKCoreKit.framework */; };
+		572CECE61C64C04F00EC4DAF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CECE21C64C04F00EC4DAF /* FBSDKLoginKit.framework */; };
+		572CECF41C64FC0300EC4DAF /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CECF31C64FC0300EC4DAF /* Util.m */; };
+		572CED061C64FD3A00EC4DAF /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CECFB1C64FD3A00EC4DAF /* LaunchViewController.m */; };
+		572CED071C64FD3A00EC4DAF /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CECFE1C64FD3A00EC4DAF /* OrderViewController.m */; };
+		572CED081C64FD3A00EC4DAF /* ProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CED001C64FD3A00EC4DAF /* ProductViewController.m */; };
+		572CED091C64FD3A00EC4DAF /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CED031C64FD3A00EC4DAF /* SignInViewController.m */; };
+		572CED0A1C64FD3A00EC4DAF /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CED051C64FD3A00EC4DAF /* SignUpViewController.m */; };
+		572CED0D1C64FDE400EC4DAF /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CED0C1C64FDE400EC4DAF /* ProductCollectionViewCell.m */; };
+		572CED101C64FEE800EC4DAF /* SQLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 572CED0F1C64FEE800EC4DAF /* SQLConnection.m */; };
+		572CED2B1C64FF2F00EC4DAF /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CED2A1C64FF2F00EC4DAF /* PassKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		572CED2D1C64FF3B00EC4DAF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CED2C1C64FF3B00EC4DAF /* Security.framework */; };
+		572CED2F1C64FF4200EC4DAF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CED2E1C64FF4200EC4DAF /* libsqlite3.0.tbd */; };
+		572CED301C64FF5E00EC4DAF /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CED1B1C64FF0000EC4DAF /* Stripe.framework */; };
+		572CED311C64FF6600EC4DAF /* Stripe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572CED1B1C64FF0000EC4DAF /* Stripe.framework */; };
+		572CED321C64FF6600EC4DAF /* Stripe.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 572CED1B1C64FF0000EC4DAF /* Stripe.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		572CED371C64FFE400EC4DAF /* Data.db in Resources */ = {isa = PBXBuildFile; fileRef = 572CED361C64FFE400EC4DAF /* Data.db */; };
+		81E042771C65091D00DEE0B5 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81E042741C65091D00DEE0B5 /* Lato-Bold.ttf */; };
+		81E042781C65091D00DEE0B5 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81E042751C65091D00DEE0B5 /* Lato-Medium.ttf */; };
+		81E042791C65091D00DEE0B5 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81E042761C65091D00DEE0B5 /* Lato-Regular.ttf */; };
+		81E042831C650D8800DEE0B5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E042821C650D8800DEE0B5 /* MBProgressHUD.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		572CECAA1C64913700EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CEC881C64913600EC4DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 572CEC8F1C64913600EC4DAF;
+			remoteInfo = Test;
+		};
+		572CECB51C64913700EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CEC881C64913600EC4DAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 572CEC8F1C64913600EC4DAF;
+			remoteInfo = Test;
+		};
+		572CED1A1C64FF0000EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04CDB4421A5F2E1800B854EE;
+			remoteInfo = StripeiOS;
+		};
+		572CED1C1C64FF0000EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 045E7C031A5F41DE004751EF;
+			remoteInfo = "StripeiOS Tests";
+		};
+		572CED1E1C64FF0000EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D12C061A5F556D0010446E;
+			remoteInfo = StripeOSX;
+		};
+		572CED201C64FF0000EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04D12C101A5F556D0010446E;
+			remoteInfo = StripeOSXTests;
+		};
+		572CED221C64FF0000EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 049E84AB1A605D93000B66CD;
+			remoteInfo = StripeiOSStatic;
+		};
+		572CED331C64FF6600EC4DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 04CDB4411A5F2E1800B854EE;
+			remoteInfo = StripeiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		572CED351C64FF6600EC4DAF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				572CED321C64FF6600EC4DAF /* Stripe.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		572CEC901C64913600EC4DAF /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		572CEC941C64913600EC4DAF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		572CEC961C64913600EC4DAF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		572CEC971C64913700EC4DAF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		572CEC9D1C64913700EC4DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		572CEC9F1C64913700EC4DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		572CECA21C64913700EC4DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		572CECA41C64913700EC4DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572CECA91C64913700EC4DAF /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		572CECAD1C64913700EC4DAF /* TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTests.m; sourceTree = "<group>"; };
+		572CECAF1C64913700EC4DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572CECB41C64913700EC4DAF /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		572CECB81C64913700EC4DAF /* TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUITests.m; sourceTree = "<group>"; };
+		572CECBA1C64913700EC4DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		572CECDF1C64C04F00EC4DAF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		572CECE01C64C04F00EC4DAF /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
+		572CECE11C64C04F00EC4DAF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		572CECE21C64C04F00EC4DAF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		572CECE71C64C3D600EC4DAF /* Test-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
+		572CECF21C64FC0300EC4DAF /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		572CECF31C64FC0300EC4DAF /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		572CECF51C64FC1E00EC4DAF /* Test_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test_Constants.h; sourceTree = "<group>"; };
+		572CECFA1C64FD3A00EC4DAF /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		572CECFB1C64FD3A00EC4DAF /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		572CECFD1C64FD3A00EC4DAF /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderViewController.h; sourceTree = "<group>"; };
+		572CECFE1C64FD3A00EC4DAF /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
+		572CECFF1C64FD3A00EC4DAF /* ProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductViewController.h; sourceTree = "<group>"; };
+		572CED001C64FD3A00EC4DAF /* ProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductViewController.m; sourceTree = "<group>"; };
+		572CED021C64FD3A00EC4DAF /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		572CED031C64FD3A00EC4DAF /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		572CED041C64FD3A00EC4DAF /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		572CED051C64FD3A00EC4DAF /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		572CED0B1C64FDE400EC4DAF /* ProductCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCollectionViewCell.h; sourceTree = "<group>"; };
+		572CED0C1C64FDE400EC4DAF /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
+		572CED0E1C64FEE800EC4DAF /* SQLConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLConnection.h; sourceTree = "<group>"; };
+		572CED0F1C64FEE800EC4DAF /* SQLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLConnection.m; sourceTree = "<group>"; };
+		572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Stripe.xcodeproj; path = Stripe/Stripe.xcodeproj; sourceTree = "<group>"; };
+		572CED2A1C64FF2F00EC4DAF /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		572CED2C1C64FF3B00EC4DAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		572CED2E1C64FF4200EC4DAF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		572CED361C64FFE400EC4DAF /* Data.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Data.db; sourceTree = "<group>"; };
+		81E042741C65091D00DEE0B5 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		81E042751C65091D00DEE0B5 /* Lato-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Medium.ttf"; sourceTree = "<group>"; };
+		81E042761C65091D00DEE0B5 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		81E042811C650D8800DEE0B5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		81E042821C650D8800DEE0B5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		572CEC8D1C64913600EC4DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572CED301C64FF5E00EC4DAF /* Stripe.framework in Frameworks */,
+				572CED2F1C64FF4200EC4DAF /* libsqlite3.0.tbd in Frameworks */,
+				572CED2D1C64FF3B00EC4DAF /* Security.framework in Frameworks */,
+				572CED311C64FF6600EC4DAF /* Stripe.framework in Frameworks */,
+				572CED2B1C64FF2F00EC4DAF /* PassKit.framework in Frameworks */,
+				572CECE31C64C04F00EC4DAF /* Bolts.framework in Frameworks */,
+				572CECE51C64C04F00EC4DAF /* FBSDKCoreKit.framework in Frameworks */,
+				572CECE61C64C04F00EC4DAF /* FBSDKLoginKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572CECA61C64913700EC4DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572CECB11C64913700EC4DAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		572CEC871C64913600EC4DAF = {
+			isa = PBXGroup;
+			children = (
+				572CEC921C64913600EC4DAF /* Test */,
+				572CECAC1C64913700EC4DAF /* TestTests */,
+				572CECB71C64913700EC4DAF /* TestUITests */,
+				572CEC911C64913600EC4DAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		572CEC911C64913600EC4DAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				572CEC901C64913600EC4DAF /* Test.app */,
+				572CECA91C64913700EC4DAF /* TestTests.xctest */,
+				572CECB41C64913700EC4DAF /* TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		572CEC921C64913600EC4DAF /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				572CECEB1C64FB7700EC4DAF /* Lib */,
+				572CECDE1C64C03500EC4DAF /* Framework */,
+				572CECEC1C64FBDA00EC4DAF /* MVC */,
+				572CECF01C64FC0300EC4DAF /* Misc */,
+				572CEC961C64913600EC4DAF /* AppDelegate.h */,
+				572CEC971C64913700EC4DAF /* AppDelegate.m */,
+				572CEC931C64913600EC4DAF /* Supporting Files */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		572CEC931C64913600EC4DAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				81E042731C65091D00DEE0B5 /* Fonts */,
+				572CED361C64FFE400EC4DAF /* Data.db */,
+				572CECE71C64C3D600EC4DAF /* Test-Prefix.pch */,
+				572CECA41C64913700EC4DAF /* Info.plist */,
+				572CECA11C64913700EC4DAF /* LaunchScreen.storyboard */,
+				572CEC9F1C64913700EC4DAF /* Assets.xcassets */,
+				572CEC9C1C64913700EC4DAF /* Main.storyboard */,
+				572CEC941C64913600EC4DAF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		572CECAC1C64913700EC4DAF /* TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				572CECAD1C64913700EC4DAF /* TestTests.m */,
+				572CECAF1C64913700EC4DAF /* Info.plist */,
+			);
+			path = TestTests;
+			sourceTree = "<group>";
+		};
+		572CECB71C64913700EC4DAF /* TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				572CECB81C64913700EC4DAF /* TestUITests.m */,
+				572CECBA1C64913700EC4DAF /* Info.plist */,
+			);
+			path = TestUITests;
+			sourceTree = "<group>";
+		};
+		572CECDE1C64C03500EC4DAF /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				572CED2E1C64FF4200EC4DAF /* libsqlite3.0.tbd */,
+				572CED2C1C64FF3B00EC4DAF /* Security.framework */,
+				572CED2A1C64FF2F00EC4DAF /* PassKit.framework */,
+				572CECDF1C64C04F00EC4DAF /* Bolts.framework */,
+				572CECE01C64C04F00EC4DAF /* FacebookSDKStrings.bundle */,
+				572CECE11C64C04F00EC4DAF /* FBSDKCoreKit.framework */,
+				572CECE21C64C04F00EC4DAF /* FBSDKLoginKit.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		572CECEB1C64FB7700EC4DAF /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				81E042801C650D8800DEE0B5 /* MBProgressHUD */,
+				572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		572CECEC1C64FBDA00EC4DAF /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				572CECED1C64FBDA00EC4DAF /* Controller */,
+				572CECEE1C64FBDA00EC4DAF /* Model */,
+				572CECEF1C64FBDA00EC4DAF /* View */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		572CECED1C64FBDA00EC4DAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				572CECF91C64FD3A00EC4DAF /* Home */,
+				572CECFC1C64FD3A00EC4DAF /* PaymentModule */,
+				572CED011C64FD3A00EC4DAF /* UserModule */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		572CECEE1C64FBDA00EC4DAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				572CED0E1C64FEE800EC4DAF /* SQLConnection.h */,
+				572CED0F1C64FEE800EC4DAF /* SQLConnection.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		572CECEF1C64FBDA00EC4DAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				572CED0B1C64FDE400EC4DAF /* ProductCollectionViewCell.h */,
+				572CED0C1C64FDE400EC4DAF /* ProductCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		572CECF01C64FC0300EC4DAF /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				572CECF11C64FC0300EC4DAF /* Util */,
+				572CECF51C64FC1E00EC4DAF /* Test_Constants.h */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		572CECF11C64FC0300EC4DAF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				572CECF21C64FC0300EC4DAF /* Util.h */,
+				572CECF31C64FC0300EC4DAF /* Util.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		572CECF91C64FD3A00EC4DAF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				572CECFA1C64FD3A00EC4DAF /* LaunchViewController.h */,
+				572CECFB1C64FD3A00EC4DAF /* LaunchViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		572CECFC1C64FD3A00EC4DAF /* PaymentModule */ = {
+			isa = PBXGroup;
+			children = (
+				572CECFD1C64FD3A00EC4DAF /* OrderViewController.h */,
+				572CECFE1C64FD3A00EC4DAF /* OrderViewController.m */,
+				572CECFF1C64FD3A00EC4DAF /* ProductViewController.h */,
+				572CED001C64FD3A00EC4DAF /* ProductViewController.m */,
+			);
+			path = PaymentModule;
+			sourceTree = "<group>";
+		};
+		572CED011C64FD3A00EC4DAF /* UserModule */ = {
+			isa = PBXGroup;
+			children = (
+				572CED021C64FD3A00EC4DAF /* SignInViewController.h */,
+				572CED031C64FD3A00EC4DAF /* SignInViewController.m */,
+				572CED041C64FD3A00EC4DAF /* SignUpViewController.h */,
+				572CED051C64FD3A00EC4DAF /* SignUpViewController.m */,
+			);
+			path = UserModule;
+			sourceTree = "<group>";
+		};
+		572CED121C64FEFF00EC4DAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				572CED1B1C64FF0000EC4DAF /* Stripe.framework */,
+				572CED1D1C64FF0000EC4DAF /* StripeiOS Tests.xctest */,
+				572CED1F1C64FF0000EC4DAF /* StripeOSX.framework */,
+				572CED211C64FF0000EC4DAF /* StripeOSXTests.xctest */,
+				572CED231C64FF0000EC4DAF /* libStripe.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81E042731C65091D00DEE0B5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				81E042741C65091D00DEE0B5 /* Lato-Bold.ttf */,
+				81E042751C65091D00DEE0B5 /* Lato-Medium.ttf */,
+				81E042761C65091D00DEE0B5 /* Lato-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		81E042801C650D8800DEE0B5 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				81E042811C650D8800DEE0B5 /* MBProgressHUD.h */,
+				81E042821C650D8800DEE0B5 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		572CEC8F1C64913600EC4DAF /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572CECBD1C64913700EC4DAF /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				572CEC8C1C64913600EC4DAF /* Sources */,
+				572CEC8D1C64913600EC4DAF /* Frameworks */,
+				572CEC8E1C64913600EC4DAF /* Resources */,
+				572CED351C64FF6600EC4DAF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				572CED341C64FF6600EC4DAF /* PBXTargetDependency */,
+			);
+			name = Test;
+			productName = Test;
+			productReference = 572CEC901C64913600EC4DAF /* Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		572CECA81C64913700EC4DAF /* TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572CECC01C64913700EC4DAF /* Build configuration list for PBXNativeTarget "TestTests" */;
+			buildPhases = (
+				572CECA51C64913700EC4DAF /* Sources */,
+				572CECA61C64913700EC4DAF /* Frameworks */,
+				572CECA71C64913700EC4DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				572CECAB1C64913700EC4DAF /* PBXTargetDependency */,
+			);
+			name = TestTests;
+			productName = TestTests;
+			productReference = 572CECA91C64913700EC4DAF /* TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		572CECB31C64913700EC4DAF /* TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 572CECC31C64913700EC4DAF /* Build configuration list for PBXNativeTarget "TestUITests" */;
+			buildPhases = (
+				572CECB01C64913700EC4DAF /* Sources */,
+				572CECB11C64913700EC4DAF /* Frameworks */,
+				572CECB21C64913700EC4DAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				572CECB61C64913700EC4DAF /* PBXTargetDependency */,
+			);
+			name = TestUITests;
+			productName = TestUITests;
+			productReference = 572CECB41C64913700EC4DAF /* TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		572CEC881C64913600EC4DAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = 3E;
+				TargetAttributes = {
+					572CEC8F1C64913600EC4DAF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					572CECA81C64913700EC4DAF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 572CEC8F1C64913600EC4DAF;
+					};
+					572CECB31C64913700EC4DAF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 572CEC8F1C64913600EC4DAF;
+					};
+				};
+			};
+			buildConfigurationList = 572CEC8B1C64913600EC4DAF /* Build configuration list for PBXProject "Test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 572CEC871C64913600EC4DAF;
+			productRefGroup = 572CEC911C64913600EC4DAF /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 572CED121C64FEFF00EC4DAF /* Products */;
+					ProjectRef = 572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				572CEC8F1C64913600EC4DAF /* Test */,
+				572CECA81C64913700EC4DAF /* TestTests */,
+				572CECB31C64913700EC4DAF /* TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		572CED1B1C64FF0000EC4DAF /* Stripe.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Stripe.framework;
+			remoteRef = 572CED1A1C64FF0000EC4DAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		572CED1D1C64FF0000EC4DAF /* StripeiOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "StripeiOS Tests.xctest";
+			remoteRef = 572CED1C1C64FF0000EC4DAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		572CED1F1C64FF0000EC4DAF /* StripeOSX.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = StripeOSX.framework;
+			remoteRef = 572CED1E1C64FF0000EC4DAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		572CED211C64FF0000EC4DAF /* StripeOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = StripeOSXTests.xctest;
+			remoteRef = 572CED201C64FF0000EC4DAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		572CED231C64FF0000EC4DAF /* libStripe.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libStripe.a;
+			remoteRef = 572CED221C64FF0000EC4DAF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		572CEC8E1C64913600EC4DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572CED371C64FFE400EC4DAF /* Data.db in Resources */,
+				81E042771C65091D00DEE0B5 /* Lato-Bold.ttf in Resources */,
+				572CECA31C64913700EC4DAF /* LaunchScreen.storyboard in Resources */,
+				81E042791C65091D00DEE0B5 /* Lato-Regular.ttf in Resources */,
+				572CECA01C64913700EC4DAF /* Assets.xcassets in Resources */,
+				572CEC9E1C64913700EC4DAF /* Main.storyboard in Resources */,
+				81E042781C65091D00DEE0B5 /* Lato-Medium.ttf in Resources */,
+				572CECE41C64C04F00EC4DAF /* FacebookSDKStrings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572CECA71C64913700EC4DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572CECB21C64913700EC4DAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		572CEC8C1C64913600EC4DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572CED091C64FD3A00EC4DAF /* SignInViewController.m in Sources */,
+				572CED0D1C64FDE400EC4DAF /* ProductCollectionViewCell.m in Sources */,
+				572CEC981C64913700EC4DAF /* AppDelegate.m in Sources */,
+				572CED071C64FD3A00EC4DAF /* OrderViewController.m in Sources */,
+				81E042831C650D8800DEE0B5 /* MBProgressHUD.m in Sources */,
+				572CEC951C64913600EC4DAF /* main.m in Sources */,
+				572CED061C64FD3A00EC4DAF /* LaunchViewController.m in Sources */,
+				572CED101C64FEE800EC4DAF /* SQLConnection.m in Sources */,
+				572CECF41C64FC0300EC4DAF /* Util.m in Sources */,
+				572CED081C64FD3A00EC4DAF /* ProductViewController.m in Sources */,
+				572CED0A1C64FD3A00EC4DAF /* SignUpViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572CECA51C64913700EC4DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572CECAE1C64913700EC4DAF /* TestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		572CECB01C64913700EC4DAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				572CECB91C64913700EC4DAF /* TestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		572CECAB1C64913700EC4DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 572CEC8F1C64913600EC4DAF /* Test */;
+			targetProxy = 572CECAA1C64913700EC4DAF /* PBXContainerItemProxy */;
+		};
+		572CECB61C64913700EC4DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 572CEC8F1C64913600EC4DAF /* Test */;
+			targetProxy = 572CECB51C64913700EC4DAF /* PBXContainerItemProxy */;
+		};
+		572CED341C64FF6600EC4DAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StripeiOS;
+			targetProxy = 572CED331C64FF6600EC4DAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		572CEC9C1C64913700EC4DAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				572CEC9D1C64913700EC4DAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		572CECA11C64913700EC4DAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				572CECA21C64913700EC4DAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		572CECBB1C64913700EC4DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		572CECBC1C64913700EC4DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		572CECBE1C64913700EC4DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test/Framework",
+				);
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				INFOPLIST_FILE = Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3e.test.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		572CECBF1C64913700EC4DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Test/Framework",
+				);
+				GCC_PREFIX_HEADER = "Test/Test-Prefix.pch";
+				INFOPLIST_FILE = Test/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3e.test.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		572CECC11C64913700EC4DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3e.test.TestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+			};
+			name = Debug;
+		};
+		572CECC21C64913700EC4DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3e.test.TestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Test.app/Test";
+			};
+			name = Release;
+		};
+		572CECC41C64913700EC4DAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3e.test.TestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Test;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		572CECC51C64913700EC4DAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3e.test.TestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Test;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		572CEC8B1C64913600EC4DAF /* Build configuration list for PBXProject "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572CECBB1C64913700EC4DAF /* Debug */,
+				572CECBC1C64913700EC4DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572CECBD1C64913700EC4DAF /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572CECBE1C64913700EC4DAF /* Debug */,
+				572CECBF1C64913700EC4DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572CECC01C64913700EC4DAF /* Build configuration list for PBXNativeTarget "TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572CECC11C64913700EC4DAF /* Debug */,
+				572CECC21C64913700EC4DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		572CECC31C64913700EC4DAF /* Build configuration list for PBXNativeTarget "TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				572CECC41C64913700EC4DAF /* Debug */,
+				572CECC51C64913700EC4DAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 572CEC881C64913600EC4DAF /* Project object */;
+}

@@ -1,0 +1,25 @@
+//
+//  Test-Prefix.pch
+//  Test
+//
+//  Created by Admin on 05/02/16.
+//  Copyright © 2016 3E. All rights reserved.
+//
+
+#ifndef Test_Prefix_pch
+#define Test_Prefix_pch
+
+#ifdef __OBJC__
+
+#import "Util.h"
+#import "Test_Constants.h"
+#import <Stripe/Stripe.h>
+#import "AppDelegate.h"
+#import "MBProgressHUD.h"
+
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Test_Prefix_pch */
