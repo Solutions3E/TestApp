@@ -13,4 +13,9 @@
 #define k_Auth @"isAuth"
 #define k_Email @"Email"
 
+#define kCreditCardLength 16
+#define kCreditCardLengthPlusSpaces (kCreditCardLength + 3)
+#define kSpace @" "
+#define kCreditCardObscureLength (kCreditCardLength - 4)
+
 #endif

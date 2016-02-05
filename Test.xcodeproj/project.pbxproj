@@ -37,6 +37,10 @@
 		81E042781C65091D00DEE0B5 /* Lato-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81E042751C65091D00DEE0B5 /* Lato-Medium.ttf */; };
 		81E042791C65091D00DEE0B5 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 81E042761C65091D00DEE0B5 /* Lato-Regular.ttf */; };
 		81E042831C650D8800DEE0B5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E042821C650D8800DEE0B5 /* MBProgressHUD.m */; };
+		81E0428E1C651E1400DEE0B5 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E042871C651E1400DEE0B5 /* TPKeyboardAvoidingCollectionView.m */; };
+		81E0428F1C651E1400DEE0B5 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E042891C651E1400DEE0B5 /* TPKeyboardAvoidingScrollView.m */; };
+		81E042901C651E1400DEE0B5 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E0428B1C651E1400DEE0B5 /* TPKeyboardAvoidingTableView.m */; };
+		81E042911C651E1400DEE0B5 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 81E0428D1C651E1400DEE0B5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +163,14 @@
 		81E042761C65091D00DEE0B5 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		81E042811C650D8800DEE0B5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		81E042821C650D8800DEE0B5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		81E042861C651E1400DEE0B5 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		81E042871C651E1400DEE0B5 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		81E042881C651E1400DEE0B5 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		81E042891C651E1400DEE0B5 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		81E0428A1C651E1400DEE0B5 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		81E0428B1C651E1400DEE0B5 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		81E0428C1C651E1400DEE0B5 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		81E0428D1C651E1400DEE0B5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +290,7 @@
 		572CECEB1C64FB7700EC4DAF /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				81E042851C651E1400DEE0B5 /* TPKeyboardAvoiding */,
 				81E042801C650D8800DEE0B5 /* MBProgressHUD */,
 				572CED111C64FEFF00EC4DAF /* Stripe.xcodeproj */,
 			);
@@ -400,6 +413,21 @@
 				81E042821C650D8800DEE0B5 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		81E042851C651E1400DEE0B5 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				81E042861C651E1400DEE0B5 /* TPKeyboardAvoidingCollectionView.h */,
+				81E042871C651E1400DEE0B5 /* TPKeyboardAvoidingCollectionView.m */,
+				81E042881C651E1400DEE0B5 /* TPKeyboardAvoidingScrollView.h */,
+				81E042891C651E1400DEE0B5 /* TPKeyboardAvoidingScrollView.m */,
+				81E0428A1C651E1400DEE0B5 /* TPKeyboardAvoidingTableView.h */,
+				81E0428B1C651E1400DEE0B5 /* TPKeyboardAvoidingTableView.m */,
+				81E0428C1C651E1400DEE0B5 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				81E0428D1C651E1400DEE0B5 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,16 +611,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81E0428F1C651E1400DEE0B5 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				572CED091C64FD3A00EC4DAF /* SignInViewController.m in Sources */,
 				572CED0D1C64FDE400EC4DAF /* ProductCollectionViewCell.m in Sources */,
 				572CEC981C64913700EC4DAF /* AppDelegate.m in Sources */,
+				81E042911C651E1400DEE0B5 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				572CED071C64FD3A00EC4DAF /* OrderViewController.m in Sources */,
 				81E042831C650D8800DEE0B5 /* MBProgressHUD.m in Sources */,
 				572CEC951C64913600EC4DAF /* main.m in Sources */,
 				572CED061C64FD3A00EC4DAF /* LaunchViewController.m in Sources */,
 				572CED101C64FEE800EC4DAF /* SQLConnection.m in Sources */,
+				81E042901C651E1400DEE0B5 /* TPKeyboardAvoidingTableView.m in Sources */,
 				572CECF41C64FC0300EC4DAF /* Util.m in Sources */,
 				572CED081C64FD3A00EC4DAF /* ProductViewController.m in Sources */,
+				81E0428E1C651E1400DEE0B5 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				572CED0A1C64FD3A00EC4DAF /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

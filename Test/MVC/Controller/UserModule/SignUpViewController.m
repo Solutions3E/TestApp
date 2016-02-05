@@ -153,6 +153,7 @@
     if (arrUser.count > 0)
     {
         NSLog(@"User Exist");
+        [self presentViewController: [Util alertControllerWithTitle: k_APPName message:@"Email ID already exists, please try again." actionTitle: @"OK"] animated:YES completion:nil];
     }
     else
     {

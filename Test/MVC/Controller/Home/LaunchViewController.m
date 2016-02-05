@@ -27,7 +27,7 @@
     
     if ([[appDelegate().defaults objectForKey:k_Auth]isEqualToString:@"1"])
     {
-        [self performSegueWithIdentifier:@"product" sender:nil];
+        //[self performSegueWithIdentifier:@"product" sender:nil];
     }
 
 }
