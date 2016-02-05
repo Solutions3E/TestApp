@@ -248,6 +248,9 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="159" y="30" width="58" height="19"/>
+                                </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="V4e-Ee-gTh">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -261,7 +264,8 @@
                                         <exclude reference="xHL-hX-eJY"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="152" y="88" width="72" height="68"/>
                                     <mask key="constraints">
                                         <include reference="iee-aW-5sg"/>
                                         <include reference="xHL-hX-eJY"/>
@@ -270,8 +274,22 @@
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rTr-ih-isI">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Ekz-gX-pdh"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ekz-gX-pdh"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="215" width="344" height="17"/>
+                                    <mask key="constraints">
+                                        <include reference="Ekz-gX-pdh"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="3pR-6K-ZSb" id="F7l-H3-gdU"/>
                                 </connections>
@@ -280,6 +298,9 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="257" width="344" height="17"/>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="3pR-6K-ZSb" id="I1Z-4o-JpL"/>
                                 </connections>
@@ -288,6 +309,9 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="299" width="344" height="17"/>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="3pR-6K-ZSb" id="uFW-ek-BOS"/>
                                 </connections>
@@ -297,8 +321,10 @@
                         <constraints>
                             <constraint firstItem="rTr-ih-isI" firstAttribute="top" secondItem="V4e-Ee-gTh" secondAttribute="bottom" constant="59" id="3j6-11-BZK"/>
                             <constraint firstItem="V4e-Ee-gTh" firstAttribute="top" secondItem="nZz-Ou-hVp" secondAttribute="bottom" constant="39" id="4f2-Rp-wl8"/>
+                            <constraint firstItem="Kv6-SY-NLe" firstAttribute="height" secondItem="rTr-ih-isI" secondAttribute="height" id="5VT-TW-0vr"/>
                             <constraint firstItem="hUW-ns-3fM" firstAttribute="leading" secondItem="rTr-ih-isI" secondAttribute="leading" id="7Jn-sb-JOD"/>
                             <constraint firstAttribute="trailing" secondItem="IOe-sy-Dss" secondAttribute="trailing" constant="17" id="B2y-UO-5Lm"/>
+                            <constraint firstItem="hUW-ns-3fM" firstAttribute="height" secondItem="rTr-ih-isI" secondAttribute="height" id="CfW-k4-X3T"/>
                             <constraint firstItem="Kv6-SY-NLe" firstAttribute="leading" secondItem="rTr-ih-isI" secondAttribute="leading" id="FEV-YI-lfQ"/>
                             <constraint firstItem="VjK-Pc-ta6" firstAttribute="leading" secondItem="Oaq-GV-40a" secondAttribute="leading" id="G0K-pn-ynh"/>
                             <constraint firstItem="VjK-Pc-ta6" firstAttribute="top" secondItem="CgK-R8-thn" secondAttribute="bottom" id="GU5-uT-Occ"/>
@@ -330,10 +356,12 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="b39-Vk-tbC"/>
+                                <exclude reference="5VT-TW-0vr"/>
                                 <exclude reference="FEV-YI-lfQ"/>
                                 <exclude reference="kb9-t8-355"/>
                                 <exclude reference="zgI-Lf-etl"/>
                                 <exclude reference="7Jn-sb-JOD"/>
+                                <exclude reference="CfW-k4-X3T"/>
                                 <exclude reference="OjD-eP-j27"/>
                                 <exclude reference="gEh-NN-cde"/>
                                 <exclude reference="3j6-11-BZK"/>
@@ -365,10 +393,12 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="b39-Vk-tbC"/>
+                                <include reference="5VT-TW-0vr"/>
                                 <include reference="FEV-YI-lfQ"/>
                                 <include reference="kb9-t8-355"/>
                                 <include reference="zgI-Lf-etl"/>
                                 <include reference="7Jn-sb-JOD"/>
+                                <include reference="CfW-k4-X3T"/>
                                 <include reference="OjD-eP-j27"/>
                                 <include reference="gEh-NN-cde"/>
                                 <include reference="3j6-11-BZK"/>
@@ -390,6 +420,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="heightConstraints" destination="Ekz-gX-pdh" id="BQp-KN-ERz"/>
                         <outlet property="txtfield_email" destination="hUW-ns-3fM" id="9ol-mi-asd"/>
                         <outlet property="txtfield_name" destination="rTr-ih-isI" id="Xsl-eB-bw8"/>
                         <outlet property="txtfield_password" destination="Kv6-SY-NLe" id="f2S-9t-xi9"/>
@@ -460,6 +491,9 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="163" y="33" width="50" height="19"/>
+                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0D-YM-jgu">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -493,7 +527,8 @@
                                         <exclude reference="v5x-yW-0Zt"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="152" y="88" width="72" height="68"/>
                                     <mask key="constraints">
                                         <include reference="ROV-ph-vBh"/>
                                         <include reference="v5x-yW-0Zt"/>
@@ -504,14 +539,31 @@
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="12" y="257" width="352" height="17"/>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="2MV-Be-oof" id="8I9-jl-S10"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dII-XN-UOX">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="SUB-z7-jyO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SUB-z7-jyO"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="12" y="215" width="352" height="17"/>
+                                    <mask key="constraints">
+                                        <include reference="SUB-z7-jyO"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="2MV-Be-oof" id="uHa-sb-ILw"/>
                                 </connections>
@@ -524,6 +576,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dII-XN-UOX" secondAttribute="trailing" constant="-5" id="Hvr-bW-kqL"/>
                             <constraint firstItem="uqC-9q-A3r" firstAttribute="top" secondItem="UKp-Se-eEp" secondAttribute="bottom" id="Ign-zd-86x"/>
                             <constraint firstItem="0QL-0p-XQF" firstAttribute="leading" secondItem="m3Y-me-g4T" secondAttribute="leading" id="JVn-fY-Kg9"/>
+                            <constraint firstItem="abD-iR-ruU" firstAttribute="height" secondItem="dII-XN-UOX" secondAttribute="height" id="QTL-op-5by"/>
                             <constraint firstItem="abD-iR-ruU" firstAttribute="trailing" secondItem="dII-XN-UOX" secondAttribute="trailing" id="Qdt-i4-HzG"/>
                             <constraint firstItem="Hqf-Zp-fFs" firstAttribute="centerX" secondItem="m3Y-me-g4T" secondAttribute="centerX" id="bQB-hj-6rq"/>
                             <constraint firstItem="uqC-9q-A3r" firstAttribute="leading" secondItem="m3Y-me-g4T" secondAttribute="leading" id="dhb-6i-dbE"/>
@@ -550,6 +603,7 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="qVi-4F-a8F"/>
+                                <exclude reference="QTL-op-5by"/>
                                 <exclude reference="Qdt-i4-HzG"/>
                                 <exclude reference="dzL-oN-dGn"/>
                                 <exclude reference="ejb-b4-E09"/>
@@ -581,6 +635,7 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="qVi-4F-a8F"/>
+                                <include reference="QTL-op-5by"/>
                                 <include reference="Qdt-i4-HzG"/>
                                 <include reference="dzL-oN-dGn"/>
                                 <include reference="ejb-b4-E09"/>
@@ -603,6 +658,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="heightConstraints" destination="SUB-z7-jyO" id="3Yh-o2-WNB"/>
                         <outlet property="txtfield_email" destination="dII-XN-UOX" id="V2a-dc-OvU"/>
                         <outlet property="txtfield_password" destination="abD-iR-ruU" id="cK5-Si-J7x"/>
                         <segue destination="3CO-FN-AAb" kind="show" identifier="product" id="tKi-eG-kZ3"/>
@@ -834,8 +890,8 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7NA-pk-A1L">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="ba1-Ap-bJ0"/>
-                                                    <constraint firstAttribute="height" constant="40" id="dUa-fP-sz9"/>
+                                                    <constraint firstAttribute="width" constant="100" id="ba1-Ap-bJ0"/>
+                                                    <constraint firstAttribute="height" constant="35" id="dUa-fP-sz9"/>
                                                 </constraints>
                                                 <state key="normal" backgroundImage="Pay"/>
                                                 <variation key="default">
@@ -1189,6 +1245,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="btn_paymentSuccess" destination="Ypz-PW-cd0" id="t2a-pr-lvo"/>
+                        <outlet property="heightConstraints" destination="pAe-K7-7hP" id="52E-gZ-ZGa"/>
                         <outlet property="txtfield_address1" destination="NZl-ck-nyz" id="Fut-uB-5gc"/>
                         <outlet property="txtfield_address2" destination="Dok-0k-Zdq" id="irc-Hp-obR"/>
                         <outlet property="txtfield_cardNumber" destination="W6v-yX-qaK" id="S1t-ZA-5hO"/>
@@ -1219,6 +1276,9 @@
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="155" y="28" width="65" height="19"/>
+                                </variation>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="C1J-ob-y9r">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -1278,6 +1338,9 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="67" width="375" height="600"/>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="3CO-FN-AAb" id="qpS-6e-D5k"/>
                                     <outlet property="delegate" destination="3CO-FN-AAb" id="06J-6a-fFV"/>
@@ -1395,6 +1458,6 @@
         <image name="SignUp" width="172" height="74"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tKi-eG-kZ3"/>
+        <segue reference="lqm-QX-G2h"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -20,12 +20,14 @@
 - (IBAction)btnAction_facebookSignUp:(id)sender;
 - (IBAction)btnAction_signUp:(id)sender;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraints;
 @end
 
 @implementation SignUpViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.heightConstraints.constant = 30;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -71,7 +73,6 @@
     [self facebookSignUp];
     
     appDelegate().hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    appDelegate().hud.dimBackground = YES;
     appDelegate().hud.removeFromSuperViewOnHide = YES;
 }
 
@@ -153,7 +154,7 @@
     if (arrUser.count > 0)
     {
         NSLog(@"User Exist");
-        [self presentViewController: [Util alertControllerWithTitle: k_APPName message:@"Email ID already exists, please try again." actionTitle: @"OK"] animated:YES completion:nil];
+        [self presentViewController: [Util alertControllerWithTitle: k_APPName message:@"Email ID already exists, please try with another email." actionTitle: @"OK"] animated:YES completion:nil];
     }
     else
     {

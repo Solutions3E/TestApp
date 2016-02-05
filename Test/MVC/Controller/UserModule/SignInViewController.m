@@ -19,12 +19,14 @@
 - (IBAction)btnAction_facebookSignUp:(id)sender;
 - (IBAction)btnAction_signIn:(id)sender;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraints;
 @end
 
 @implementation SignInViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.heightConstraints.constant = 30;
     [self addRightHintView];
 }
 
@@ -91,7 +93,6 @@
     [self facebookSignUp];
     
     appDelegate().hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    appDelegate().hud.dimBackground = YES;
     appDelegate().hud.removeFromSuperViewOnHide = YES;
     
 }
